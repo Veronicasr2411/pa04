@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", sans-serif;
+}
+
+body{
+  background: linear-gradient(-35deg, blue, purple);
+}
+
+/* #banner {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+} */
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+#titulo-animado {
+  text-align: center;
+  padding: 20px;
+  margin-top: -20px; /* para acercarlo al banner */
+  font-weight: bold;
+  animation: textoAnimado 2s infinite;
+  color: #333;
+}
+
+/* ANIMACIÓN */
+@keyframes textoAnimado {
+  0% {
+      transform: scale(1);
+      color: #333;
+  }
+  50% {
+      transform: scale(1.15);
+      color: #1fa98d;   /* color cuando crece */
+  }
+  100% {
+      transform: scale(1);
+      color: #333;
+  }
+}
+
+
+/*GRID*/
+#contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px;
+    width: 85%;
+    margin: 15px auto;
+}
+@media (max-width: 900px) {
+    #contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    #contenido {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Caja de cada columna */
+.columna {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/*letras*/
+h3, label{
+  font-family: 'Fredoka';
+}
+p{
+  font-family: 'Nunito';
+}
+
+/* Imágenes responsivas */
+.columna img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* FORMULARIO */
+.columna form {
+    display: flex;
+    flex-direction: column;
+}
+
+.columna input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.columna button {
+    padding: 10px;
+    background-color: #2278cf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+
+/*FOOTER - PIE DE PÁGINA*/
+
+footer {
+  background: black;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer .redes {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  list-style: none;
+  gap: 20px;
+}
+
+#iconos i{
+  color: rgb(193, 80, 221);
+}
+#iconos i:hover{
+  color: white;
+}
